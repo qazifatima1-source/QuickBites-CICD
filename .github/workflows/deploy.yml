@@ -25,7 +25,7 @@ jobs:
 
       - name: Run DevSecOps Security Check (Bandit)
         run: |
-          bandit -r . -x ./tests -ll
+          bandit -r . -x ./tests -lll
 
       - name: Run Automated Unit Tests
         run: |
