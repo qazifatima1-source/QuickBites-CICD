@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>My orders</h1>
+{% if not orders %}
+  <p>No orders yet. <a href="{{ url_for('menu') }}">Choose something from the menu.</a></p>
+{% endif %}
+{% for entry in orders %}
+<section class="card">
+  <h2>Order #{{ entry.order.id }} <small>{{ entry.order.status }} · {{ entry.order.created_at }}</small></h2>
+  <ul>
+    {% for line in entry.lines %}
+      <li>{{ line.quantity }} × {{ line.name }} <span class="price">Rs {{ line.quantity * line.unit_price }}</span></li>
+    {% endfor %}
+  </ul>
+  <p><strong>Total: Rs {{ entry.order.total }}</strong></p>
+</section>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Today's menu</h1>
+<form method="post">
+  <ul class="menu">
+    {% for item in items %}
+    <li>
+      <div>
+        <strong>{{ item.name }}</strong>
+        <span class="desc">{{ item.description }}</span>
+      </div>
+      <span class="price">Rs {{ item.price }}</span>
+      <input type="number" name="qty_{{ item.id }}" value="0" min="0" max="20"
+             aria-label="Quantity of {{ item.name }}">
+    </li>
+    {% endfor %}
+  </ul>
+  <button type="submit">Place order</button>
+</form>
+{% endblock %}

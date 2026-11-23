@@ -1,0 +1,24 @@
+/* Simple styling. Change colours here only. */
+:root { --bg:#fbf7f2; --ink:#2b2420; --accent:#b8412b; --line:#e3d9cd; --card:#fff; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.5; }
+header { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem;
+         padding:1rem 1.5rem; border-bottom:1px solid var(--line); background:var(--card); }
+.brand { font-weight:700; font-size:1.25rem; color:var(--accent); text-decoration:none; }
+nav a { margin-left:1rem; color:var(--ink); }
+main { max-width:640px; margin:2rem auto; padding:0 1rem; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:1rem 1.25rem; margin-bottom:1rem; }
+.narrow { max-width:380px; }
+label { display:block; margin-bottom:.75rem; }
+input { display:block; width:100%; padding:.5rem; margin-top:.25rem; border:1px solid var(--line); border-radius:6px; font-size:1rem; }
+button { background:var(--accent); color:#fff; border:0; padding:.6rem 1.2rem; border-radius:6px; font-size:1rem; cursor:pointer; }
+button:hover, button:focus-visible { background:#962f1c; }
+.flash { background:#fff3cd; border:1px solid #f0d98a; padding:.6rem .9rem; border-radius:6px; }
+.menu { list-style:none; padding:0; margin:0 0 1rem; }
+.menu li { display:grid; grid-template-columns:1fr auto 5rem; gap:1rem; align-items:center;
+           padding:.75rem 0; border-bottom:1px solid var(--line); }
+.menu input { margin:0; }
+.desc { display:block; font-size:.9rem; color:#6b5f56; }
+.price { font-variant-numeric: tabular-nums; }
+small { font-weight:400; color:#6b5f56; font-size:.8rem; }
+.hint { font-size:.9rem; }
