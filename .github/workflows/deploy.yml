@@ -29,7 +29,7 @@ jobs:
 
       - name: Run Automated Unit Tests
         run: |
-          pytest tests/
+          python -m pytest tests/
 
       - name: Package Application Artifact
         run: |
