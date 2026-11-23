@@ -239,4 +239,4 @@ init_db()  # runs when the app starts (also under gunicorn)
 
 if __name__ == "__main__":
     # Local development only. In production use gunicorn (see Dockerfile).
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
